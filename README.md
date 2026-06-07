@@ -36,7 +36,7 @@ nmap -F <target>
 
 ![ICMP](Basic_Enumeration/scanning.png)
 
-**Challenge 3 — DNS Records**
+## Challenge 3 — DNS Records
 
 ```bash
 nslookup 192.168.56.140
@@ -49,7 +49,7 @@ dig MX 192.168.56.140
 
 ![ICMP](Basic_Enumeration/dig_mx.png)
 
-**Challenge 4 — SNMPwalk**
+## Challenge 4 — SNMPwalk
 
 ```bash
 snmpwalk -v1 -c public 192.168.56.140
@@ -57,7 +57,7 @@ snmpwalk -v1 -c public 192.168.56.140
 
 ![ICMP](Basic_Enumeration/snmpwalk.png)
 
-**Challenge 5 — TTL OS Fingerprinting**
+## Challenge 5 — TTL OS Fingerprinting
 
 ```bash
 ping -c 4 192.168.56.140
@@ -65,7 +65,7 @@ ping -c 4 192.168.56.140
 
 ![Packet37](Basic_Enumeration/ping.png)
 
-**Challenge 6 — Anonymous LDAP Query**
+## Challenge 6 — Anonymous LDAP Query
 
 ```bash
 ldapsearch -x -H ldap://192.168.56.140 -b "dc=example,dc=com"
@@ -73,7 +73,7 @@ ldapsearch -x -H ldap://192.168.56.140 -b "dc=example,dc=com"
 
 ![Packet37](Basic_Enumeration/ldapsearch.png)
 
-**Challenge 7 — SMTP VRFY / EXPN**
+## Challenge 7 — SMTP VRFY / EXPN
 
 ```bash
 nc 192.168.56.140 25
@@ -81,7 +81,7 @@ nc 192.168.56.140 25
 
 ![Decode](Basic_Enumeration/smtp.png)
 
-**Challenge 8 — NTP Enumeration**
+## Challenge 8 — NTP Enumeration
 
 ```bash
 ntpq -p 192.168.56.140
@@ -89,7 +89,7 @@ ntpq -p 192.168.56.140
 
 ![Decode](Basic_Enumeration/ntp.png)
 
-**Challenge 9 — FTP Banner**
+## Challenge 9 — FTP Banner
 
 ```bash
 nc <IP> 21
@@ -97,7 +97,7 @@ nc <IP> 21
 
 ![Decode](Basic_Enumeration/ftpd.png)
 
-**Challenge 10 — Anonymous FTP Login**
+## Challenge 10 — Anonymous FTP Login
 
 ```bash
 ftp 192.168.56.140
