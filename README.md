@@ -17,7 +17,7 @@ Target Machine (Metasploitable 2): 192.168.56.140
 netdiscover
 ```
 
-![ICMP](Assets/Question-1/ICMP.png)
+![ICMP](Basic_Enumeration/netdiscover.png)
 
 The target is 192.168.56.140
 
@@ -34,7 +34,7 @@ nbtscan -r 192.168.56.140
 nmap -F <target>
 ```
 
-![ICMP](Assets/Question-1/ICMP.png)
+![ICMP](Basic_Enumeration/scanning.png)
 
 **Challenge 3 — DNS Records**
 
@@ -43,11 +43,11 @@ nslookup 192.168.56.140
 dig ANY 192.168.56.140
 dig MX 192.168.56.140
 ```
-![ICMP](Assets/Question-1/ICMP.png)
+![ICMP](Basic_Enumeration/nslookup.png)
 
-![ICMP](Assets/Question-1/ICMP.png)
+![ICMP](Basic_Enumeration/dig_any.png)
 
-![ICMP](Assets/Question-1/ICMP.png)
+![ICMP](Basic_Enumeration/dig_mx.png)
 
 **Challenge 4 — SNMPwalk**
 
@@ -55,7 +55,7 @@ dig MX 192.168.56.140
 snmpwalk -v1 -c public 192.168.56.140
 ```
 
-![ICMP](Assets/Question-1/ICMP.png)
+![ICMP](Basic_Enumeration/snmpwalk.png)
 
 **Challenge 5 — TTL OS Fingerprinting**
 
@@ -63,7 +63,7 @@ snmpwalk -v1 -c public 192.168.56.140
 ping -c 4 192.168.56.140
 ```
 
-![Packet37](Assets/Question-1/Packet_37.png)
+![Packet37](Basic_Enumeration/ping.png)
 
 **Challenge 6 — Anonymous LDAP Query**
 
@@ -71,13 +71,15 @@ ping -c 4 192.168.56.140
 ldapsearch -x -H ldap://192.168.56.140 -b "dc=example,dc=com"
 ```
 
+![Packet37](Basic_Enumeration/ldapsearch.png)
+
 **Challenge 7 — SMTP VRFY / EXPN**
 
 ```bash
 nc 192.168.56.140 25
 ```
 
-![Decode](Assets/Question-1/cyberchef.png)
+![Decode](Basic_Enumeration/smtp.png)
 
 **Challenge 8 — NTP Enumeration**
 
@@ -85,7 +87,7 @@ nc 192.168.56.140 25
 ntpq -p 192.168.56.140
 ```
 
-![Decode](Assets/Question-1/cyberchef.png)
+![Decode](Basic_Enumeration/ntp.png)
 
 **Challenge 9 — FTP Banner**
 
@@ -93,8 +95,12 @@ ntpq -p 192.168.56.140
 nc <IP> 21
 ```
 
+![Decode](Basic_Enumeration/ftpd.png)
+
 **Challenge 10 — Anonymous FTP Login**
 
 ```bash
 ftp 192.168.56.140
 ```
+
+![Decode](Basic_Enumeration/ftp_login.png)
