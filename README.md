@@ -20,6 +20,10 @@ netdiscover
 
 The target is 192.168.56.140
 
+```bash
+nbtscan -r 192.168.56.140
+```
+
 ## Challenge 2 — Fast Nmap Scan
 
 ### Steps
