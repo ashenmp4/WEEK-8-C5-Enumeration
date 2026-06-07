@@ -2,10 +2,11 @@
 
 Metasploitable 2 — Vulnerable Host Enumeration Lab
 
----
 
 Network Architecture & Discovery
+
 Attacker Machine: Kali Linux (192.168.56.X)
+
 Target Machine (Metasploitable 2): 192.168.56.140
 
 ## Challenge 1 — NetBIOS Enumeration
