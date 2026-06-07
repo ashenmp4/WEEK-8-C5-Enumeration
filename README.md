@@ -17,7 +17,7 @@ Target Machine (Metasploitable 2): 192.168.56.140
 netdiscover
 ```
 
-![ICMP](Basic_Enumeration/netdiscover.png)
+![ICMP](Screenshots/task1.png)
 
 The target is 192.168.56.140
 
